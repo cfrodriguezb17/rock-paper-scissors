@@ -26,4 +26,22 @@ let playRound = (playerSelection, computerSelection) => {
   else if (player == 'scissors' && compu == 'scissors')
     return message + 'Tie!'
 }
-
+let game = () => {
+  let roundPlayer = 0;
+  let roundComputer = 0;
+  let test = 0;
+  for (let i = 0; i < 5; i++) {
+    let playerSelection = prompt('Rock, Paper or Scissors');
+    let winner = playRound(playerSelection, getComputerChoice());
+    console.log(winner);
+    let lastLetters = winner.slice(-8);
+    if (lastLetters == 'yer Win!')
+      roundPlayer++
+    else if (lastLetters == 'ter Win!')
+      roundComputer++
+  }
+  if (roundPlayer > roundComputer)
+    return 'Player Win The Game'
+  else
+    return  'Computer Win The Game'
+}
