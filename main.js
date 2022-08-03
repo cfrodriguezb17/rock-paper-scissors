@@ -29,7 +29,6 @@ let playRound = (playerSelection, computerSelection) => {
 let game = () => {
   let roundPlayer = 0;
   let roundComputer = 0;
-  let test = 0;
   for (let i = 0; i < 5; i++) {
     let playerSelection = prompt('Rock, Paper or Scissors');
     let winner = playRound(playerSelection, getComputerChoice());
